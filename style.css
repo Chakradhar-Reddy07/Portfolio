@@ -1,0 +1,146 @@
+/* style.css — tailored for Chakradhar Reddy (IIT Indore, 2nd year CSE) */
+/* Cyan tech accent, animated portrait, responsive */
+
+:root{
+  --bg:#071019;
+  --bg-2:#081723;
+  --panel: rgba(255,255,255,0.02);
+  --muted:#9aa3b2;
+  --accent:#00e5ff;
+  --accent-2:#00b3ff;
+  --glass-border: rgba(255,255,255,0.035);
+  --radius:14px;
+  --container:1100px;
+  color-scheme: dark;
+  color: #e6eef8;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+/* base */
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  background:
+    radial-gradient(700px 300px at 10% 10%, rgba(0,179,255,0.06), transparent),
+    radial-gradient(600px 260px at 90% 90%, rgba(0,229,255,0.04), transparent),
+    linear-gradient(180deg,var(--bg),var(--bg-2));
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  overflow-x:hidden;
+}
+
+/* container */
+.container{width:100%; max-width:var(--container); margin:0 auto; padding:28px}
+
+/* header */
+.site-header{position:sticky; top:0; z-index:40; background:linear-gradient(180deg, rgba(3,6,12,0.25), transparent); border-bottom:1px solid rgba(255,255,255,0.02); backdrop-filter: blur(6px)}
+.header-inner{display:flex; align-items:center; justify-content:space-between; gap:12px}
+.brand{display:flex; align-items:center; gap:12px}
+.logo{width:48px; height:48px; border-radius:10px; display:grid; place-items:center; font-weight:800; color:white; background:linear-gradient(135deg,var(--accent-2),var(--accent))}
+.brand-text .name{font-weight:700}
+.brand-text .role{font-size:0.85rem; color:var(--muted)}
+
+/* nav */
+.nav{display:flex; gap:14px; align-items:center}
+.nav-link{color:var(--muted); text-decoration:none; font-weight:600; padding:8px 10px; border-radius:8px; transition:.18s}
+.nav-link:hover{color:var(--accent); transform:translateY(-2px)}
+
+/* header actions */
+.header-actions{display:flex; gap:10px; align-items:center}
+.btn{border:1px solid var(--glass-border); padding:8px 12px; border-radius:10px; background:transparent; color:inherit; cursor:pointer; font-weight:700}
+.btn-primary{background:linear-gradient(90deg,var(--accent-2), var(--accent)); color:#001; box-shadow:0 14px 40px rgba(0,0,0,0.6)}
+.btn-ghost{background:transparent}
+
+/* theme toggle */
+.theme-btn{width:54px; height:34px; border-radius:12px; display:grid; place-items:center; border:1px solid rgba(255,255,255,0.03); cursor:pointer; background:transparent; padding:4px}
+.toggle-track{width:44px; height:26px; background:rgba(255,255,255,0.02); border-radius:999px; display:inline-block; position:relative}
+.toggle-knob{position:absolute; left:4px; top:3px; width:20px; height:20px; border-radius:999px; background:linear-gradient(180deg,#fff,#e8f7ff); box-shadow:0 8px 20px rgba(0,0,0,0.5); transition:transform .25s cubic-bezier(.2,.9,.3,1)}
+
+/* hero */
+.hero{display:flex; gap:36px; align-items:center; padding-top:28px; padding-bottom:28px}
+.hero-left{flex:1; max-width:640px}
+.eyebrow{color:var(--muted); margin:0 0 8px 0}
+.hero-title{font-size:2.2rem; margin:0; line-height:1.03}
+.hero-title .accent{color:var(--accent); -webkit-text-stroke:0px rgba(0,0,0,0.1)}
+.hero-lead{color:var(--muted); margin-top:12px; max-width:58ch}
+.hero-cta{display:flex; gap:12px; margin-top:18px}
+
+/* stats */
+.stats{display:flex; gap:12px; margin-top:22px; list-style:none; padding:0}
+.stats li{background:var(--panel); border:1px solid var(--glass-border); padding:12px 14px; border-radius:12px; text-align:center; min-width:86px}
+.stats li strong{display:block; font-size:1.05rem}
+
+/* portrait (right) */
+.hero-right{width:340px; display:flex; justify-content:center; align-items:center}
+.portrait-wrap{position:relative; width:320px; height:320px; display:grid; place-items:center; perspective:900px}
+.portrait{width:180px; height:180px; border-radius:999px; object-fit:cover; z-index:40; border:6px solid rgba(0,0,0,0.35); box-shadow: 0 30px 80px rgba(6,8,20,0.6); transform:translateZ(40px); transition:transform .18s ease}
+.portrait-glow{position:absolute; width:260px; height:260px; border-radius:999px; filter: blur(32px); z-index:20; background: radial-gradient(circle at 30% 30%, rgba(0,229,255,0.14), rgba(0,179,255,0.06), transparent)}
+.ring{position:absolute; border-radius:999px; z-index:12; pointer-events:none; box-shadow: 0 10px 40px rgba(0,0,0,0.6); border:1px solid rgba(255,255,255,0.02)}
+.ring-outer{width:320px; height:320px; animation:spin 18s linear infinite}
+.ring-middle{width:240px; height:240px; animation:spin 14s linear reverse infinite; opacity:.92}
+.ring-inner{width:160px; height:160px; animation:spin 10s linear infinite; opacity:.95}
+@keyframes spin{from{transform:rotate(0deg)} to{transform:rotate(360deg)}}
+
+/* tilt effect */
+.portrait-wrap.tilt .ring-outer{transform:translate3d(var(--tx,0),var(--ty,0),0) rotate(var(--r,0))}
+
+/* section & cards */
+.section{padding-top:18px; padding-bottom:18px}
+.card{background:var(--panel); border:1px solid var(--glass-border); border-radius:var(--radius); padding:20px}
+.section-title{font-weight:800; margin-bottom:12px}
+
+/* bio */
+.bio-card p{color:var(--muted); margin-top:10px}
+.bio-grid{display:flex; gap:18px; margin-top:14px; flex-wrap:wrap}
+.bio-grid div{min-width:180px}
+
+/* projects */
+.project-list{display:grid; gap:14px; margin-top:12px}
+.project-card{display:flex; justify-content:space-between; align-items:center; gap:12px; padding:16px; border-radius:12px; background:linear-gradient(180deg, rgba(255,255,255,0.01), transparent); border:1px solid rgba(255,255,255,0.02); transition:transform .18s ease, box-shadow .18s ease}
+.project-card:hover{transform:translateY(-6px); box-shadow:0 18px 60px rgba(3,8,20,0.6)}
+.proj-link{font-weight:700; color:var(--accent-2); text-decoration:none}
+.proj-tag{background:rgba(255,255,255,0.02); padding:8px 10px; border-radius:10px; font-weight:700; color:var(--muted)}
+
+/* education */
+.education-list{display:grid; gap:12px; margin-top:12px}
+.edu-card{padding:14px}
+
+/* achievements & skills */
+.ach-grid{display:grid; grid-template-columns:1fr 1fr; gap:14px}
+.skills{display:flex; gap:8px; flex-wrap:wrap}
+.skills span{background:rgba(255,255,255,0.02); padding:8px 10px; border-radius:8px; font-weight:700}
+
+/* footer - social row */
+.site-footer{padding:22px 0; border-top:1px solid rgba(255,255,255,0.02); margin-top:36px}
+.footer-inner{display:flex; justify-content:space-between; align-items:center; gap:12px}
+.social{display:flex; gap:14px; align-items:center}
+.social-link{display:inline-grid; place-items:center; width:48px; height:48px; border-radius:10px; background:rgba(255,255,255,0.01); transition:transform .22s cubic-bezier(.2,.9,.3,1), box-shadow .22s; border:1px solid rgba(255,255,255,0.02)}
+.social-link .icon{width:24px; height:24px; display:block; filter:drop-shadow(0 6px 18px rgba(0,0,0,0.6))}
+
+/* icon hover animations */
+.social-link:hover{transform:translateY(-6px) scale(1.06); box-shadow:0 18px 60px rgba(0,0,0,0.6)}
+.social-link:hover .icon{animation:iconPop .6s ease}
+@keyframes iconPop{0%{transform:scale(1)}30%{transform:scale(1.25)}60%{transform:scale(0.95)}100%{transform:scale(1)}}
+
+/* reveal */
+.card, .project-card, .portrait-wrap { opacity:0; transform:translateY(8px) scale(.995); transition:opacity .6s ease, transform .6s cubic-bezier(.2,.9,.3,1) }
+.inview { opacity:1; transform:translateY(0) scale(1) }
+
+/* light theme overrides */
+html.light{
+  --bg:#f7fbff; --bg-2:#eef6ff; --panel: rgba(0,0,0,0.03); --muted:#4b5563; color: #0b1220;
+}
+html.light .logo{background:linear-gradient(135deg,var(--accent), var(--accent-2))}
+html.light .btn-primary{color:white}
+
+/* responsive */
+@media (max-width:980px){
+  .hero{flex-direction:column-reverse; gap:22px}
+  .hero-right{width:100%}
+  .portrait-wrap{width:220px; height:220px}
+  .portrait{width:140px; height:140px}
+  .nav{display:none}
+  .ach-grid{grid-template-columns:1fr}
+  .container{padding:18px}
+}

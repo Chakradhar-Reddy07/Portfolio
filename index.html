@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Chakradhar Reddy — B.Tech CSE (II Year) | IIT Indore</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand" aria-hidden="true">
+        <div class="logo">CR</div>
+        <div class="brand-text">
+          <div class="name">Chakradhar Reddy</div>
+          <div class="role">B.Tech — CSE (2nd Year) • IIT Indore</div>
+        </div>
+      </div>
+
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="#home" class="nav-link">Home</a>
+        <a href="#bio" class="nav-link">Bio</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#education" class="nav-link">Education</a>
+        <a href="#skills" class="nav-link">Skills</a>
+      </nav>
+
+      <div class="header-actions">
+        <button id="resumeBtn" class="btn btn-ghost" title="Download resume (replace resume.pdf)">Resume</button>
+        <button id="themeToggle" class="theme-btn" aria-pressed="false" title="Toggle theme">
+          <span class="toggle-track"><span class="toggle-knob" aria-hidden="true"></span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="home">
+    <!-- Hero -->
+    <section class="hero container" id="hero">
+      <div class="hero-left">
+        <p class="eyebrow">Hello — I’m</p>
+        <h1 class="hero-title">Chakradhar Reddy<br><span class="accent">Developer • ML Enthusiast</span></h1>
+        <p class="hero-lead">
+          A second-year Computer Science student at IIT Indore. I build modern web apps and explore machine learning workflows.
+          I focus on clean UI, fast frontends, and scalable backends using React, Node, and Express.
+        </p>
+
+        <div class="hero-cta">
+          <button class="btn btn-primary" onclick="scrollToSection('projects')">See Projects</button>
+          <a class="btn btn-ghost" href="#education">Education</a>
+        </div>
+
+        <ul class="stats" aria-hidden="true">
+          <li><strong>2</strong><span>Year</span></li>
+          <li><strong>HTML • CSS • JS • SQL </strong><span>Core</span></li>
+          <li><strong>React • Node • Express</strong><span>Frameworks</span></li>
+        </ul>
+      </div>
+
+      <div class="hero-right" aria-hidden="false">
+        <div class="portrait-wrap" id="portraitWrap" tabindex="0" aria-label="Profile portrait">
+          <div class="ring ring-outer" aria-hidden="true"></div>
+          <div class="ring ring-middle" aria-hidden="true"></div>
+          <div class="ring ring-inner" aria-hidden="true"></div>
+
+          <!-- Put your portrait file here as profile.jpg -->
+          <img class="portrait" src="profile.jpg" alt="Chakradhar Reddy portrait" />
+
+          <div class="portrait-glow" aria-hidden="true"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bio -->
+    <section id="bio" class="container section bio">
+      <div class="card bio-card">
+        <h2>Bio</h2>
+        <p class="muted">
+          I’m a second-year B.Tech CSE student at IIT Indore, focused on building web applications and experimenting with machine learning.
+          I enjoy turning ideas into interactive experiences and learning system design, algorithms, and model deployment.
+        </p>
+
+        <div class="bio-grid">
+          <div><strong>College</strong><span>Indian Institute of Technology Indore</span></div>
+          <div><strong>Course</strong><span>B.Tech — Computer Science & Engineering (2nd Year)</span></div>
+          <div><strong>Interests</strong><span>Web Dev, ML, Algorithms</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="container section projects">
+      <h2 class="section-title">Selected Projects</h2>
+
+      <div class="project-list">
+        <!-- placeholders — edit with your real projects -->
+        <article class="project-card">
+          <div class="proj-left">
+            <h3>XFolio</h3>
+            <p class="muted">It is a web Application that lets users to create and publish a proffesional portfolio in minutes - no coding required.</p>
+            <a class="proj-link" href="https://x-folio-porfolio-builder.vercel.app/" target="_blank" rel="noopener">View project →</a>
+          </div>
+          <div class="proj-right"><span class="proj-tag">Web</span></div>
+        </article>
+
+        <article class="project-card">
+          <div class="proj-left">
+            <h3>Project Two (placeholder)</h3>
+            <p class="muted">Short description for a machine learning experiment or web app.</p>
+            <a class="proj-link" href="#" target="_blank" rel="noopener">View project →</a>
+          </div>
+          <div class="proj-right"><span class="proj-tag">ML</span></div>
+        </article>
+
+        <article class="project-card">
+          <div class="proj-left">
+            <h3>Project Three (placeholder)</h3>
+            <p class="muted">Small tool, utility, or coursework project — update later.</p>
+            <a class="proj-link" href="#" target="_blank" rel="noopener">View project →</a>
+          </div>
+          <div class="proj-right"><span class="proj-tag">Tool</span></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section id="education" class="container section education">
+      <h2 class="section-title">Education</h2>
+      <div class="education-list">
+        <div class="edu-card card">
+          <strong>B.Tech — Computer Science & Engineering</strong>
+          <div class="muted">Indian Institute of Technology Indore — 2023–Present</div>
+          <p>Currently in second year; coursework includes Data Structures, DBMS and introductory ML.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills & Achievements -->
+    <section id="skills" class="container section achievements">
+      <div class="ach-grid">
+        <div class="card">
+          <h3>Achievements</h3>
+          <ul>
+            <li>Active contributor to coursework projects and coding assignments</li>
+            <li>Built web prototypes and small ML demos </li>
+            <li>Participated in college hackathons and workshops</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Skills</h3>
+          <div class="skills">
+            <span>SQL</span> <span>HTML</span><span>CSS</span><span>JavaScript</span><span>React</span><span>Node.js</span>
+            <span>Express</span><span>Python</span><span>ML (scikit-learn)</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>© <span id="year"></span> Chakradhar Reddy</div>
+      <div class="social" role="navigation" aria-label="Social links">
+        <a class="social-link" href="https://github.com/Chakradhar-Reddy07" target="_blank" rel="noopener" title="GitHub (replace link)">
+          <img src="github.svg" alt="GitHub" class="icon" />
+        </a>
+        <a class="social-link" href="http://www.linkedin.com/in/chakradhar-reddy-s-5ab55334a" target="_blank" rel="noopener" title="LinkedIn (replace link)">
+          <img src="linkedin.svg" alt="LinkedIn" class="icon" />
+        </a>
+        <a class="social-link" href="#" target="_blank" rel="noopener" title="Twitter (replace link)">
+          <img src="twitter.svg" alt="Twitter" class="icon" />
+        </a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
